@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>SpellBound App Link</title>
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <style>
+        @import url('../css/StyleSheet.css');
+    </style>
+</head>
+<body>
+    <center>
+        <div class="logobox">
+            <img src="../images/spellbound_logo.png" />
+        </div>
+
+        <div class="bluebox">
+            <h1>Welcome!</h1>
+        </div>
+    </center>
+
+    <div id="content">
+        <p>
+            The photo mural located in the first floor of the main hospital portrays the California ecosystem. Use the free SpellBound AR app on your mobile device to bring this mural to life with augmented reality!
+            <br><br>
+            1. Download the free app:
+        </p>
+
+        <center>
+            <h3><a id="spelLink" class="button">Get SpellBound!</a></h3>
+        </center>
+
+        <p>
+            2. Enable location services in the app to turn on the experience.
+        </p>
+
+        <p>
+            3. Turn on your sound, and point your camera at the mural. Tap on the screen to activate the animals!
+            <br>
+            <br>
+        </p>
+    </div>
+
+    <script>
+        (function () {
+            var ua = navigator.userAgent.toLowerCase();
+            var isAndroid = ua.indexOf("android") > -1;
+            
+            if (isAndroid) {
+                document.getElementById("spelLink").onclick = function try_to_open_app() {
+                    window.location = 'https://play.google.com/store/apps/details?id=com.getspellboundbooks.spellbound&hl=en';
+                };
+            }else{
+                document.getElementById("spelLink").onclick = function try_to_open_app() {
+                    window.location = 'https://itunes.apple.com/us/app/spellbound-ar/id1033984853?mt=8';
+                };
+            }
+        })();        
+    </script>
+
+</body>
+</html>
