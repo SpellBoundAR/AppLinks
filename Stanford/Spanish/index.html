@@ -1,1 +1,83 @@
+<html>
+<head>
+    <title>SpellBound App Link</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('../css/StyleSheet.css');
+    </style>
+</head>
+<body>
 
+    <div class="logobox">
+        <a target="_blank" href="https://spellboundar.com/">
+            <img id="logo" src="../images/Logo Left White.png"/>
+        </a>
+    </div>
+
+    <div class="titlebox">
+        <h1>Quieres ir a explorar?</h1>
+        <img id="imagination" src="../images/Imagination.png" height=300/>
+    </div>
+
+
+    <div id="content">
+        <h3>What</h3>
+        <p>
+            Stanford Children's Health has partnered with <a target="_blank" href="https://spellboundar.com/">SpellBound</a>, a leading augmented reality company, to provide a unique 3D mural experience. 
+            <br><br>
+            The photo mural located in the <a target="_blank" href="https://www.stanfordchildrens.org/content-public/pdf/wayfinding-maps-stanford-childrens.pdf">first floor of the main hospital</a> portrays the California ecosystem. 
+            <br><br>
+        </p>
+        <h3>How</h3>
+        <p>
+            Use the SpellBound app on your mobile device to bring this mural to life with augmented reality!
+        </p>
+        <div class="titlebox">
+            <img id="engage" src="../images/Engage.png" height=400/>
+            <br><br>
+        </div>
+        <h3>Steps</h3>
+        <p>
+            1. <strong>Download</strong> the app
+        </p>    
+
+        <center>
+            <h3><a id="spelLink" class="button">Get SpellBound!</a></h3>
+        </center>
+
+        <p>
+            2. Enable <strong>location services</strong>
+        </p>
+        <p>
+            3. Turn on your <strong>sound</strong>
+        </p>
+        <p>
+            4. <strong>Point your camera</strong> at the mural
+        </p>
+        <p>
+            5. <strong>Tap on the screen</strong> to activate animals!
+            <br>
+            <br>
+        </p>
+    </div>
+
+    <script>
+        (function () {
+            var ua = navigator.userAgent.toLowerCase();
+            var isAndroid = ua.indexOf("android") > -1;
+            
+            if (isAndroid) {
+                document.getElementById("spelLink").onclick = function try_to_open_app() {
+                    window.location = 'https://play.google.com/store/apps/details?id=com.getspellboundbooks.spellbound&hl=en';
+                };
+            }else{
+                document.getElementById("spelLink").onclick = function try_to_open_app() {
+                    window.location = 'https://itunes.apple.com/us/app/spellbound-ar/id1033984853?mt=8';
+                };
+            }
+        })();        
+    </script>
+
+</body>
+</html>
